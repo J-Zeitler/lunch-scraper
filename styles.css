@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  color: #333;
+}
+
+.title-container {
+  display: none;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+h1, h2, h3, h4 {
+  color: #111;
+  padding: 0.5rem 0;
+}
+
+#sync {
+  position: absolute;
+  right: 10px;
+  margin-top: -1.65em;
+}
+
+/**
+ * Data formatting
+ */
+.field {
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+}
+
+.field.past {
+  background-color: #f4f4f4;
+  color: #999;
+}
+
+.field.today {
+  background-color: #C8F3D1;
+  border: 2px solid #95DFA4;
+}
+
+.field.future {
+  background-color: #C8F0F3;
+}
+
+.field-label {
+  text-transform: uppercase;
+  padding: 0.3rem 0;
+}
+
+.field-item {
+  margin-left: 23px;
+  padding: 0.2rem 0;
+}
+
+
+/**
+ * Icons
+ */
+@font-face {
+  font-family: fa;
+  src: url(fontawesome-webfont.woff);
+}
+
+/**
+ * Mondays
+ */
+.field-name-field-monday .field-item:first-child:before{
+  margin-left: -23px;
+  padding-right: 6px;
+  font-family: fa;
+  content: '\f00d';
+}
+
+/**
+ * Weekdays
+ */
+.field-name-field-tuesday .field-item:first-child:before,
+.field-name-field-wednesday .field-item:first-child:before,
+.field-name-field-thursday .field-item:first-child:before,
+.field-name-field-friday .field-item:first-child:before {
+  margin-left: -23px;
+  padding-right: 6px;
+  font-family: fa;
+  content: '\f185';
+}
+
+.field-name-field-tuesday .field-item:nth-child(2):before,
+.field-name-field-wednesday .field-item:nth-child(2):before,
+.field-name-field-thursday .field-item:nth-child(2):before,
+.field-name-field-friday .field-item:nth-child(2):before {
+  margin-left: -23px;
+  padding-right: 6px;
+  font-family: fa;
+  content: '\f06c';
+}
+
+.field-name-field-tuesday .field-item:nth-child(3):before,
+.field-name-field-wednesday .field-item:nth-child(3):before,
+.field-name-field-thursday .field-item:nth-child(3):before,
+.field-name-field-friday .field-item:nth-child(3):before {
+  margin-left: -23px;
+  padding-right: 11px;
+  padding-left: 5px;
+  font-family: fa;
+  content: '\f1b1';
+}
+
+/**
+ * Weekend
+ */
+.field-name-field-saturday .field-item:first-child:before,
+.field-name-field-sunday .field-item:first-child:before {
+  margin-left: -23px;
+  padding-right: 8px;
+  padding-left: 2px;
+  font-family: fa;
+  content: '\f0f5';
+}
+
+.field-name-field-saturday .field-item:nth-child(2):before,
+.field-name-field-sunday .field-item:nth-child(2):before {
+  margin-left: -23px;
+  padding-right: 7px;
+  font-family: fa;
+  content: '\f06c';
+}
+
+.field-name-field-saturday .field-item:nth-child(3):before,
+.field-name-field-sunday .field-item:nth-child(3):before {
+  margin-left: -23px;
+  padding-right: 11px;
+  padding-left: 5px;
+  font-family: fa;
+  content: '\f1b1';
+}
+
+/**
+ * Remove a la carte items
+ */
+.field-item:nth-child(4),
+.field-item:nth-child(5) {
+  display: none;
+}
+
+/**
+ * Respond
+ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+  .container {
+    width: 98%;
+  }
+
+  h1{
+    font-size: 1.7rem;
+    color: #111;
+    padding: 0.3rem 0;
+  }
+
+  #sync {
+    position: relative;
+    right: 0;
+    margin-top: 0;
+  }
+}
